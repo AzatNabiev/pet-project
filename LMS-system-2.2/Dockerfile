@@ -1,16 +1,4 @@
-FROM adoptopenjdk/openjdk11:alpine-jdk
-
-WORKDIR /app
-
-# Копирование исходного кода и pom.xml
-COPY src src
-COPY pom.xml .
-
-# Сборка приложения с использованием Maven
-RUN ./mvnw package
-
-# Копирование собранного JAR-файла в контейнер
-COPY target/*.jar app.jar
-
-# Запуск приложения при старте контейнера
+FROM openjdk:11
+ARG JAR_FILE=target/LMS-system-2-0.0.1-SNAPSHOT.jar
+COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]

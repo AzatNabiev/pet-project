@@ -2,15 +2,15 @@ version: '3.1'
 
 services:
   postgres:
-    image: postgres:13
+    image: postgres:13.10
     container_name: my-postgres
     restart: always
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: qwerty007
-      POSTGRES_DB: lms
+      POSTGRES_DB: postgres
     ports:
-      - "5432:5432"
+      - "5434:5432"
     networks:
       - my-network
     volumes:
@@ -35,9 +35,10 @@ services:
       - postgres
       - redis
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/mydatabase
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/postgres
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: qwerty007
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: org.postgresql.Driver
       SPRING_REDIS_HOST: redis
       SPRING_REDIS_PORT: 6379
     ports:
