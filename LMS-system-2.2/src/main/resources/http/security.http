@@ -1,0 +1,37 @@
+GET http://localhost:8080/api/v1/lesson
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiY3JlYXRlZEF0IjoiMjAyMy0wNC0yOVQxOToxMTozOS41MjQxMjciLCJyb2xlIjoiVEVBQ0hFUiIsInN0YXRlIjoiQUNUSVZFIiwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSJ9.rvbULcJewXv30CaiTVTnXSCazLUIMcXLqhbsN2lpL1Q
+Content-Type: application/json
+
+#####
+
+GET http://localhost:8080/logout
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiY3JlYXRlZEF0IjoiMjAyMy0wNC0yOVQxOToxMTozOS41MjQxMjciLCJyb2xlIjoiVEVBQ0hFUiIsInN0YXRlIjoiQUNUSVZFIiwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSJ9.rvbULcJewXv30CaiTVTnXSCazLUIMcXLqhbsN2lpL1Q
+Content-Type: application/json
+
+#### STUDENT
+
+GET http://localhost:8080/api/v1/lesson
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4IiwiY3JlYXRlZEF0IjoiMjAyMy0wNC0zMFQxMzowMjozMC42NDQxNjQiLCJyb2xlIjoiU1RVREVOVCIsInN0YXRlIjoiQUNUSVZFIiwiZW1haWwiOiJhemF0Lm5hYmlldkBnbWFpbC5jb20ifQ.CXTbZbSs6xxa8Kc5PlFqotNyhrzVDSABIrMy_JYCbVs
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/api/v1/lesson/1
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4IiwiY3JlYXRlZEF0IjoiMjAyMy0wNC0zMFQxMzowMjozMC42NDQxNjQiLCJyb2xlIjoiU1RVREVOVCIsInN0YXRlIjoiQUNUSVZFIiwiZW1haWwiOiJhemF0Lm5hYmlldkBnbWFpbC5jb20ifQ.CXTbZbSs6xxa8Kc5PlFqotNyhrzVDSABIrMy_JYCbVs
+Content-Type: application/json
+
+### try to create a lesson by STUDENT
+
+PUT http://localhost:8080/api/v1/lesson/1
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4IiwiY3JlYXRlZEF0IjoiMjAyMy0wNC0zMFQxMzowMjozMC42NDQxNjQiLCJyb2xlIjoiU1RVREVOVCIsInN0YXRlIjoiQUNUSVZFIiwiZW1haWwiOiJhemF0Lm5hYmlldkBnbWFpbC5jb20ifQ.CXTbZbSs6xxa8Kc5PlFqotNyhrzVDSABIrMy_JYCbVs
+Content-Type: application/json
+
+{
+  "name": "sdfsdf",
+  "description": "sfsdfs",
+  "start": "2023-04-30T10:25:39.834Z",
+  "creatorId": 2
+}
+
+
+
