@@ -86,6 +86,7 @@
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
+                    <mainClass>ru.itis.semwork.lmsssystem2.Application</mainClass>
                 </configuration>
             </plugin>
         </plugins>
